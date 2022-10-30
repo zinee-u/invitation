@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="favicon" href="./favicon.ico">
+    <title>세대주_유수진_초대장</title>
+
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Poor Story', cursive;
+        }
+
+        body {
+            background-color: #9b070f;
+        }
+
+        .envelope {
+            width: 200px;
+            height: 200px;
+
+            background-image: url('https://pngimg.com/uploads/envelope/envelope_PNG18366.png');
+            background-size: cover;
+            background-position: center;
+
+            margin: 150px auto 0px auto;
+            cursor: pointer;
+        }
+
+        .envelope-msg {
+            color: white;
+            text-align: center;
+        }
+
+        .letter-close {
+            display: block;
+        }
+
+        .letter-open{
+            display: none;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .msgbox {
+            background-color: ivory;
+            width: 400px;
+            margin: auto;
+            color: brown;
+            padding: 30px;
+            font-size: 16px;
+            line-height: 30px;
+            box-shadow: 0px 0px 10px 0px white;
+        }
+
+        .from {
+            background-color: ivory;
+            text-align: right;
+            margin-bottom: 0px;
+        }
+
+        @media screen and (max-width: 760px) {
+            .msgbox {
+                width: 300px;
+                padding: 20px;
+            }
+        }
+
+        .zinee {
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://navermaps.github.io/maps.js/docs/img/logo_200x200.png');
+            background-size: cover;
+            background-position: center;
+            margin: 70px auto 0px auto;
+            border-radius: 100px;
+            border: 5px solid white;
+            box-shadow: 0px 0px 10px 0px white;
+            cursor: pointer;
+        }
+
+    </style>
+
+<script>
+    function open_letter(){
+        document.getElementsByClassName("letter-close")[0].style.display = 'none'
+        document.getElementsByClassName("letter-open")[0].style.display = 'block'
+    }
+    function go_map() {
+        alert('WELCOME to MY HOUSE');
+        window.location.href='https://naver.me/5ncI2w12';
+    }
+</script>
+
+</head>
+
+<body>
+    <div class='letter-close'>
+        <div class="envelope" onclick="open_letter()"></div>
+        <h2 class="envelope-msg">수진쓰 집들이 초대장</h2>
+    </div>
+
+    <div class='letter-open'>
+        <div class='zinee' onclick="go_map()"></div>
+        <h1>Invitation</h1>
+        <div class="msgbox">
+            방장 술찌. 원소주 환영. <br />
+            주소: 이오스오피스텔 722호 <br />
+            *주차 가능(4h) <br />
+            <br />
+            <p class="from"> 세대주 수진.</p>
+        </div>
+    </div>
+</body>
+
+<audio id="bgm-player" loop="loop" autoplay="autoplay"><source src="https://cdn.pixabay.com/audio/2021/11/15/audio_6f510a7ff3.mp3"></audio>
+</html>
